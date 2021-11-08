@@ -1,3 +1,4 @@
+import { InvoicesService } from '../services/invoices.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InvoicelistComponent implements OnInit {
 
-  constructor() { }
+  constructor(private invoiceService: InvoicesService) { }
 
   ngOnInit(): void {
+    this.invoiceService.getAllInvoices().subscribe(response => console.log(response))
   }
 
 }
