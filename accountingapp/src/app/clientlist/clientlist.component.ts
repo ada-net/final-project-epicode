@@ -32,7 +32,7 @@ export class ClientlistComponent implements OnInit {
   }
 
   viewClient(item: Iclient): void {
-    this.router.navigate(['clients', item.id, 'view']);
+    this.router.navigate(['clients', item.id, 'detail']);
   }
 
 }
