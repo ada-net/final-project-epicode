@@ -14,6 +14,8 @@ import { FormsModule } from '@angular/forms';
 import { EditclientComponent } from './editclient/editclient.component';
 import { InvoicelistComponent } from './invoicelist/invoicelist.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DetailclientComponent } from './detailclient/detailclient.component';
+import { DetailinvoiceComponent } from './detailinvoice/detailinvoice.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     ClientlistComponent,
     AddclientComponent,
     EditclientComponent,
-    InvoicelistComponent
+    InvoicelistComponent,
+    DetailclientComponent,
+    DetailinvoiceComponent
   ],
   imports: [
     BrowserModule,
