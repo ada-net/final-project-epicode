@@ -13,6 +13,7 @@ import { AddclientComponent } from './addclient/addclient.component';
 import { FormsModule } from '@angular/forms';
 import { EditclientComponent } from './editclient/editclient.component';
 import { InvoicelistComponent } from './invoicelist/invoicelist.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { InvoicelistComponent } from './invoicelist/invoicelist.component';
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

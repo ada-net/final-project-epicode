@@ -1,5 +1,7 @@
 import { ClientserviceService } from './../services/clientservice.service';
 import { Component, OnInit } from '@angular/core';
+import { Iclienttable } from '../interfaces/iclienttable';
+
 
 @Component({
   selector: 'app-clientlist',
@@ -8,10 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientlistComponent implements OnInit {
 
-  constructor(private clientService: ClientserviceService) { }
+  clients!:Iclienttable;
+
+
+  constructor(private ClientService: ClientserviceService) { }
 
   ngOnInit(): void {
-    this.clientService.getAllClients().subscribe(response => console.log(response))
+    this.ClientService.getAllClients().subscribe(response => this.clients = response)
+    
   }
 
 }

@@ -1,21 +1,22 @@
 <div class="container mt-5">
-    <form class="d-flex flex-column justify-content-center align-items-center">
 
-        <h1 class="h3 mb-5 fw-normal">Sign in</h1>
+    <h1 class="h3 mb-5 fw-normal">Sign in</h1>
+
+    <form [formGroup]="form" class="d-flex flex-column justify-content-center align-items-center">
 
         <div class="form-group mb-3">
-            <label class="ml-2" for="floatingInput">Username</label>
-            <input [(ngModel)]="login.username" type="username" name="username" class="form-control"  placeholder="">
-
+            <label for="username" class="ml-2">Username</label>
+            <input type="text" name="username" formControlName="username" class="form-control"  placeholder="">
+            <div *ngIf="form.controls.username.touched &&   !form.controls.username.valid" class="alert alert-danger"> Username is required </div>
         </div>
 
         <div class="form-group">
-            <label class="ml-2" for="floatingPassword">Password</label>
-            <input [(ngModel)]="login.password" type="password" name="password" class="form-control"  placeholder="">
-
+            <label for="password" class="ml-2" >Password</label>
+            <input type="text" name="password" formControlName="password" class="form-control"  placeholder="">
+            <div *ngIf="form.controls.password.touched && !form.controls.password.valid" class="alert alert-danger"> Password is required </div>
         </div>
 
-        <button class="btn btn-lg btn-primary mt-5" type="button" (click)="login()">Go!</button>
+        <button class="btn btn-lg btn-primary mt-5" type="submit" (ngSubmit)="login()">Go!</button>
 
     </form>
 </div>

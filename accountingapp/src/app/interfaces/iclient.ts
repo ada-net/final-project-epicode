@@ -1,48 +1,49 @@
 export interface Iclient {
-            id?: number;
+            id: number;
             ragioneSociale: string;
             partitaIva: number;
             tipoCliente: string;
             email: string;
             pec: string;
             telefono: number;
-            nomeContatto?: string;
-            cognomeContatto?: string;
-            telefonoContatto?: string;
-            emailContatto?: string;
+            nomeContatto: string;
+            cognomeContatto: string;
+            telefonoContatto: string;
+            emailContatto: string;
             indirizzoSedeOperativa: {
-                id?: number;
+                id: number;
                 via: string;
                 civico: number;
                 cap: number;
                 localita: string;
                 comune: {
-                    id?: number;
+                    id: number;
                     nome: string;
                     provincia: {
-                        id?: number;
+                        id: number;
                         nome: string;
                         sigla: string
                     }
                 }
             },
             indirizzoSedeLegale: {
-                id?: number;
+                id: number;
                 via: string;
                 civico: string;
                 cap: number;
                 localita: string;
                 comune: {
-                    id?: number;
+                    id: number;
                     nome: string;
                     provincia: {
-                        id?: number;
+                        id: number;
                         nome: string;
                         sigla: string
                     }
                 }
             },
-            dataInserimento?: Date;
-            dataUltimoContatto?: Date;
-            fatturatoAnnuale?: number
+            dataInserimento: Date;
+            dataUltimoContatto: Date;
+            fatturatoAnnuale: number
 }
+
