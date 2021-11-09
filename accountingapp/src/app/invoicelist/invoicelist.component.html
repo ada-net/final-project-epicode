@@ -1,1 +1,24 @@
-<p>invoicelist works!</p>
+<div class="container">
+    <h1>Invoices Overview</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nr.</th>
+                <th scope="col">Anno</th>
+                <th scope="col">Importo</th>
+                <th scope="col">Stato (nome)</th>
+                <th scope="col">Cliente (ID)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of invoices.content; index as i">
+                <td scope="row">{{i + 1}}</td>
+                <td scope="row">{{item.anno}}</td>
+                <td scope="row">{{item.importo}}</td>
+                <td scope="row">{{item.stato.nome}}</td>
+                <td scope="row">{{item.cliente.id}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
