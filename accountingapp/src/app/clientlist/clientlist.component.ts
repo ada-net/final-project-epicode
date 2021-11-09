@@ -10,13 +10,13 @@ import { Iclienttable } from '../interfaces/iclienttable';
 })
 export class ClientlistComponent implements OnInit {
 
-  clients!:Iclienttable;
+  clients!: Iclienttable;
 
 
-  constructor(private ClientService: ClientserviceService) { }
+  constructor(private clientService: ClientserviceService) { }
 
   ngOnInit(): void {
-    this.ClientService.getAllClients().subscribe(response => this.clients = response)
+    this.clientService.getAllClients().subscribe(response => this.clients = response)
     
   }
 
