@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { DetailclientComponent } from './detailclient/detailclient.component';
 import { DetailinvoiceComponent } from './detailinvoice/detailinvoice.component';
+import { EditinvoiceComponent } from './editinvoice/editinvoice.component';
 
 const routes: Routes = [
   {
@@ -41,8 +42,12 @@ const routes: Routes = [
     component: InvoicelistComponent
   },
   {
-    path: 'invoices/list:id/detail', 
+    path: 'invoices/:id/detail', 
     component: DetailinvoiceComponent
+  },
+  {
+    path: 'invoices/:id/edit', 
+    component: EditinvoiceComponent
   }
 ];
 

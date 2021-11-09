@@ -1,7 +1,8 @@
-<div class="container my-3 text-center mt-5">
+<div class="container my-3 mt-5">
     <h1>{{detailClient.ragioneSociale}}</h1>
     <div class="mt-5">
-        <h2>General Info</h2>
+
+        <h3>General Info</h3>
         <p>Client Number: {{ detailClient.id }}</p>
         <p>Client Name: {{ detailClient.ragioneSociale }}</p>
         <p>Tax Number: {{ detailClient.partitaIva }}</p>
@@ -9,10 +10,12 @@
         <p>Client Email: {{ detailClient.email }}</p>
         <p>Client PEC: {{ detailClient.pec }}</p>
         <p>Client Phone: {{ detailClient.telefono }}</p>
+
         <h3 class="mt-5">Contact Person Details</h3>
         <p>Client Contact Name: {{ detailClient.nomeContatto }}</p>
         <p>Client Contact Phone: {{ detailClient.telefonoContatto }}</p>
         <p>Client Contact Email: {{ detailClient.emailContatto }}</p>
+
         <h3 class="mt-5">Production Plant</h3>
         <p>ID: {{ detailClient.indirizzoSedeOperativa.id }}</p>
         <p>Street: {{ detailClient.indirizzoSedeOperativa.via }}, {{ detailClient.indirizzoSedeOperativa.civico }}</p>
@@ -23,6 +26,7 @@
         <p>Province Name: {{ detailClient.indirizzoSedeOperativa.comune.provincia.nome }}</p>
         <p>Province ID: {{ detailClient.indirizzoSedeOperativa.comune.provincia.id }}</p>
         <p>Province Short: {{ detailClient.indirizzoSedeOperativa.comune.provincia.sigla }}</p>
+
         <h3 class="mt-5">Headquarter Info</h3>
         <p>ID: {{ detailClient.indirizzoSedeLegale.id }}</p>
         <p>Street: {{ detailClient.indirizzoSedeLegale.via }}, {{ detailClient.indirizzoSedeLegale.civico }}</p>
@@ -33,9 +37,10 @@
         <p>Province Name: {{ detailClient.indirizzoSedeLegale.comune.provincia.nome }}</p>
         <p>Province ID: {{ detailClient.indirizzoSedeLegale.comune.provincia.id }}</p>
         <p>Province Short: {{ detailClient.indirizzoSedeLegale.comune.provincia.sigla }}</p>
+
         <h3 class="mt-5">Other</h3>
         <p>Date registered: {{ detailClient.dataInserimento }}</p>
         <p>Date last contacted: {{ detailClient.dataUltimoContatto }}</p>
         <p>Annual turnover: {{ detailClient.fatturatoAnnuale }}</p>
 
-</div>
+    </div>

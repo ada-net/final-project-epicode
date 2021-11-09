@@ -1,1 +1,56 @@
-<p>detailinvoice works!</p>
+<div class="container my-3 mt-5">
+    <h1>Invoice Nr. {{detailInvoice.id}}, date: {{detailInvoice.data | date}}</h1>
+    <div class="mt-5">
+        
+        <h3>General Info</h3>
+        <p>Invoice ID: {{detailInvoice.id}}</p>
+        <p>Date Timestamp: {{detailInvoice.data}}</p>
+        <p>Nr.: {{ detailInvoice.numero }}</p>
+        <p>Year: {{ detailInvoice.anno }}</p>
+        <p>Amount: {{ detailInvoice.importo }}</p>
+        <p>Paid Status: {{ detailInvoice.stato.id }}</p>
+        <p>Paid Status Meaning: {{ detailInvoice.stato.nome }}</p>
+
+        <h3 class="mt-5">Client Details</h3>
+        <p>ID: {{ detailInvoice.cliente.id }}</p>
+        <p>Name: {{ detailInvoice.cliente.ragioneSociale }}</p>
+        <p>Tax Number: {{ detailInvoice.cliente.partitaIva }}</p>
+        <p>Type: {{ detailInvoice.cliente.tipoCliente }}</p>
+        <p>Email: {{ detailInvoice.cliente.email }}</p>
+        <p>PEC: {{ detailInvoice.cliente.pec }}</p>
+        <p>Phone: {{ detailInvoice.cliente.telefono }}</p>
+        <p>Contact Person Name: {{ detailInvoice.cliente.nomeContatto }}</p>
+        <p>Contact Person Surname: {{ detailInvoice.cliente.cognomeContatto }}</p>
+        <p>Contact Person Phone: {{ detailInvoice.cliente.telefonoContatto }}</p>
+        <p>Contact Person Email: {{ detailInvoice.cliente.emailContatto }}</p>
+
+        <h3 class="mt-5">Production Plant Info</h3>
+        <p>ID: {{ detailInvoice.cliente.indirizzoSedeOperativa.id }}</p>
+        <p>Street: {{ detailInvoice.cliente.indirizzoSedeOperativa.via }}, {{ detailInvoice.cliente.indirizzoSedeOperativa.civico }}</p>
+        <p>Postal Code: {{ detailInvoice.cliente.indirizzoSedeOperativa.cap }}</p>
+        <p>City: {{ detailInvoice.cliente.indirizzoSedeOperativa.localita }}</p>
+        <p>Municipality ID: {{ detailInvoice.cliente.indirizzoSedeOperativa.comune.id }}</p>
+        <p>Municipality Name: {{ detailInvoice.cliente.indirizzoSedeOperativa.comune.nome }}</p>
+        <p>Province Name: {{ detailInvoice.cliente.indirizzoSedeOperativa.comune.provincia.nome }}</p>
+        <p>Province ID: {{ detailInvoice.cliente.indirizzoSedeOperativa.comune.provincia.id }}</p>
+        <p>Province Short: {{ detailInvoice.cliente.indirizzoSedeOperativa.comune.provincia.sigla }}</p>
+
+        
+        <h3 class="mt-5">Headquarter Info</h3>
+        <p>ID: {{ detailInvoice.cliente.indirizzoSedeLegale.id }}</p>
+        <p>Street: {{ detailInvoice.cliente.indirizzoSedeLegale.via }}, {{ detailInvoice.cliente.indirizzoSedeLegale.civico }}</p>
+        <p>Postal Code: {{ detailInvoice.cliente.indirizzoSedeLegale.cap }}</p>
+        <p>City: {{ detailInvoice.cliente.indirizzoSedeLegale.localita }}</p>
+        <p>Municipality ID: {{ detailInvoice.cliente.indirizzoSedeLegale.comune.id }}</p>
+        <p>Municipality Name: {{ detailInvoice.cliente.indirizzoSedeLegale.comune.nome }}</p>
+        <p>Province Name: {{ detailInvoice.cliente.indirizzoSedeLegale.comune.provincia.nome }}</p>
+        <p>Province ID: {{ detailInvoice.cliente.indirizzoSedeLegale.comune.provincia.id }}</p>
+        <p>Province Short: {{ detailInvoice.cliente.indirizzoSedeLegale.comune.provincia.sigla }}</p>
+
+        <h3 class="mt-5">Other</h3>
+        <p>Date registered: {{ detailInvoice.cliente.dataInserimento }}</p>
+        <p>Date last contacted: {{ detailInvoice.cliente.dataUltimoContatto }}</p>
+        <p>Annual turnover: {{ detailInvoice.cliente.fatturatoAnnuale }}</p>
+
+    </div>
+</div>
