@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
   templateUrl: './clientlist.component.html',
   styleUrls: ['./clientlist.component.css']
 })
+
+
 export class ClientlistComponent implements OnInit {
 
   clients!: Iclienttable;

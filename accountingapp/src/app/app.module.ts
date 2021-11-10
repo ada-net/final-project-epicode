@@ -21,6 +21,7 @@ import { NewProvinceMunicipalityComponent } from './new-province-municipality/ne
 import { EditProvinceMunicipalityComponent } from './edit-province-municipality/edit-province-municipality.component';
 import { ListProvincesMunicipalitiesComponent } from './list-provinces-municipalities/list-provinces-municipalities.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,8 @@ import { ListProvincesMunicipalitiesComponent } from './list-provinces-municipal
     EditinvoiceComponent,
     NewProvinceMunicipalityComponent,
     EditProvinceMunicipalityComponent,
-    ListProvincesMunicipalitiesComponent
+    ListProvincesMunicipalitiesComponent,
+    
   ],
   imports: [
     BrowserModule,
