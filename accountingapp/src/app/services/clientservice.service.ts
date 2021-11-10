@@ -10,7 +10,7 @@ import { Iclient } from '../interfaces/iclient';
 })
 
 export class ClientserviceService {
-  urlAPI = environment.urlAPI + '/api/clienti?size=100&sort=ragioneSociale,ASC';
+  urlAPI = environment.urlAPI + '/api/clienti?size=150&sort=id,ASC';
   urlAPIDetail = environment.urlAPI + '/api/clienti/';
   urlAPIUpdate = environment.urlAPI + '/api/clienti/';
   urlAPIDelete = environment.urlAPI + '/api/clienti/';

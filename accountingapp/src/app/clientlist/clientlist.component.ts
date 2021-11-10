@@ -15,6 +15,7 @@ import { Router } from '@angular/router';
 export class ClientlistComponent implements OnInit {
 
   clients!: Iclienttable;
+  clientsForFilter: Iclient[] = [];
 
 
   constructor(private clientService: ClientserviceService, private router: Router) { }
@@ -24,9 +25,9 @@ export class ClientlistComponent implements OnInit {
   }
 
   removeClient(item: Iclient): void {
-   /* this.clientService.removeClient(item).subscribe(response => {
-      this.clients = this.clients.filter(element => element.id !== item.id);
-    });*/
+    this.clientService.removeClient(item).subscribe(resp => {
+      this.clientsForFilter = this.clientsForFilter.filter(element => element.id !== item.id);
+    });
   }
 
   editClient(item: Iclient): void {

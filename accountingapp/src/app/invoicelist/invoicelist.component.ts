@@ -12,11 +12,18 @@ import { Router } from '@angular/router';
 export class InvoicelistComponent implements OnInit {
 
   invoices!: Iinvoicetable;
+  invoicesForFilter: Iinvoice[]=[];
 
   constructor(private invoiceService: InvoicesService, private router: Router) { }
 
   ngOnInit(): void {
     this.invoiceService.getAllInvoices().subscribe(response => this.invoices = response)
+  }
+
+  removeInvoice(item: Iinvoice): void {
+    this.invoiceService.removeInvoice(item).subscribe(resp => {
+      this.invoicesForFilter = this.invoicesForFilter.filter(element => element.id !== item.id);
+    });
   }
 
   editInvoice(item: Iinvoice): void {
