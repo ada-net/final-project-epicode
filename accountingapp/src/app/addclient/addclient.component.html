@@ -1,1 +1,87 @@
-<p>addclient works!</p>
+<div class="container my-3">
+    <h1>Client Registration</h1>
+<form>
+    <div class="my-3">
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="client.ragioneSociale" class="form-control" name="name" placeholder="Name...">
+      </div>
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="client.partitaIva" class="form-control" name="username" placeholder="Username...">
+      </div>
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="client.tipoCliente" class="form-control" name="email" placeholder="Email...">
+      </div>
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="client.email" class="form-control" name="phone" placeholder="Phone...">
+      </div>
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="client.pec" class="form-control" name="website" placeholder="Website...">
+      </div>
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="client.telefono" class="form-control" name="username" placeholder="Username...">
+      </div>
+      <h3>Contact Person</h3>
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="client.nomeContatto" class="form-control" name="email" placeholder="Email...">
+      </div>
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="client.cognomeContatto" class="form-control" name="phone" placeholder="Phone...">
+      </div>
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="client.telefonoContatto" class="form-control" name="website" placeholder="Website...">
+      </div>
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="client.emailContatto" class="form-control" name="username" placeholder="Username...">
+      </div>
+      <h3>Sede Operativa</h3>
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="client.indirizzoSedeOperativa.via" class="form-control" name="email" placeholder="Email...">
+      </div>
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="client.indirizzoSedeOperativa.civico" class="form-control" name="phone" placeholder="Phone...">
+      </div>
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="client.indirizzoSedeOperativa.cap" class="form-control" name="website" placeholder="Website...">
+      </div>
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="client.indirizzoSedeOperativa.localita" class="form-control" name="email" placeholder="Email...">
+      </div>
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="client.indirizzoSedeOperativa.comune.nome" class="form-control" name="phone" placeholder="Phone...">
+      </div>
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="client.indirizzoSedeOperativa.comune.provincia.nome" class="form-control" name="website" placeholder="Website...">
+      </div>
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="client.indirizzoSedeOperativa.comune.provincia.sigla" class="form-control" name="website" placeholder="Website...">
+      </div>
+      <h3>Headquarter</h3>
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="client.indirizzoSedeLegale.via" class="form-control" name="email" placeholder="Email...">
+      </div>
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="client.indirizzoSedeLegale.civico" class="form-control" name="phone" placeholder="Phone...">
+      </div>
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="client.indirizzoSedeLegale.cap" class="form-control" name="website" placeholder="Website...">
+      </div>
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="client.indirizzoSedeLegale.localita" class="form-control" name="email" placeholder="Email...">
+      </div>
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="client.indirizzoSedeLegale.comune.nome" class="form-control" name="phone" placeholder="Phone...">
+      </div>
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="client.indirizzoSedeLegale.comune.provincia.nome" class="form-control" name="website" placeholder="Website...">
+      </div>
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="client.indirizzoSedeLegale.comune.provincia.sigla" class="form-control" name="website" placeholder="Website...">
+      </div>
+      
+      <div class="row my-3">
+        <button type="button" class="btn btn-dark form-control" (click)="saveClient()">Save Client</button>
+      </div>
+    </div>
+  </form>
+</div>
+

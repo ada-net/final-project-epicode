@@ -29,7 +29,7 @@ export interface Iclient {
             indirizzoSedeLegale: {
                 id: number;
                 via: string;
-                civico: string;
+                civico: number;
                 cap: number;
                 localita: string;
                 comune: {
@@ -42,8 +42,8 @@ export interface Iclient {
                     }
                 }
             },
-            dataInserimento: Date;
-            dataUltimoContatto: Date;
+            dataInserimento?: Date;
+            dataUltimoContatto?: Date;
             fatturatoAnnuale: number
 }
 

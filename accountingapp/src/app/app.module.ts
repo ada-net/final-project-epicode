@@ -17,6 +17,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { DetailclientComponent } from './detailclient/detailclient.component';
 import { DetailinvoiceComponent } from './detailinvoice/detailinvoice.component';
 import { EditinvoiceComponent } from './editinvoice/editinvoice.component';
+import { NewProvinceMunicipalityComponent } from './new-province-municipality/new-province-municipality.component';
+import { EditProvinceMunicipalityComponent } from './edit-province-municipality/edit-province-municipality.component';
+import { ListProvincesMunicipalitiesComponent } from './list-provinces-municipalities/list-provinces-municipalities.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { EditinvoiceComponent } from './editinvoice/editinvoice.component';
     InvoicelistComponent,
     DetailclientComponent,
     DetailinvoiceComponent,
-    EditinvoiceComponent
+    EditinvoiceComponent,
+    NewProvinceMunicipalityComponent,
+    EditProvinceMunicipalityComponent,
+    ListProvincesMunicipalitiesComponent
   ],
   imports: [
     BrowserModule,
