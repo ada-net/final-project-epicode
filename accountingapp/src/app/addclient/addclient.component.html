@@ -3,91 +3,98 @@
   <form>
     <div>
       <div>
-        <input type="text" [(ngModel)]="client.ragioneSociale" class="form-control col-xs-4" name="ragioneSociale" placeholder="Client Name...">
+        <input type="text" [(ngModel)]="newclient.ragioneSociale" class="form-control col-xs-4" name="ragioneSociale" placeholder="Client Name...">
       </div>
       <div class="my-1">
-        <input type="text" [(ngModel)]="client.partitaIva" class="form-control" name="partitaIva" placeholder="Tax Number...">
+        <input type="text" [(ngModel)]="newclient.partitaIva" class="form-control" name="partitaIva" placeholder="Tax Nr...">
       </div>
       <div class="my-1">
-        <input type="text" [(ngModel)]="client.tipoCliente" class="form-control" name="tipoCliente" placeholder="Client Type...">
+        <p>Select Client Type:</p>
+        <select class="custom-select" [(ngModel)]="newclient.tipoCliente" name="tipoCliente">
+          <option [ngValue]="item" *ngFor="let item of clientTypes">{{item}}</option>
+        </select>
       </div>
       <div class="my-1">
-        <input type="text" [(ngModel)]="client.email" class="form-control" name="email" placeholder="Email...">
+        <input type="text" [(ngModel)]="newclient.email" class="form-control" name="email" placeholder="Email...">
       </div>
       <div class="my-1">
-        <input type="text" [(ngModel)]="client.pec" class="form-control" name="pec" placeholder="PEC...">
+        <input type="text" [(ngModel)]="newclient.pec" class="form-control" name="pec" placeholder="PEC...">
       </div>
       <div class="my-1">
-        <input type="text" [(ngModel)]="client.telefono" class="form-control" name="telefono" placeholder="Phone...">
+        <input type="text" [(ngModel)]="newclient.telefono" class="form-control" name="telefono" placeholder="Phone...">
       </div>
       <h3 class="mt-4">Contact Person</h3>
       <div class="my-1">
-        <input type="text" [(ngModel)]="client.nomeContatto" class="form-control" name="nomeContatto" placeholder="Contact Name...">
+        <input type="text" [(ngModel)]="newclient.nomeContatto" class="form-control" name="nomeContatto" placeholder="Contact Name...">
       </div>
       <div class="my-1">
-        <input type="text" [(ngModel)]="client.cognomeContatto" class="form-control" name="cognomeContatto" placeholder="Contact Lastname...">
+        <input type="text" [(ngModel)]="newclient.cognomeContatto" class="form-control" name="cognomeContatto" placeholder="Contact Lastname...">
       </div>
       <div class="my-1">
-        <input type="text" [(ngModel)]="client.telefonoContatto" class="form-control" name="telefonoContatto"
+        <input type="text" [(ngModel)]="newclient.telefonoContatto" class="form-control" name="telefonoContatto"
           placeholder="Contact Phone...">
       </div>
       <div class="my-1">
-        <input type="text" [(ngModel)]="client.emailContatto" class="form-control" name="emailContatto"
+        <input type="text" [(ngModel)]="newclient.emailContatto" class="form-control" name="emailContatto"
           placeholder="Contact Email...">
       </div>
-      <h3 class="mt-4">Sede Operativa</h3>
+      <h3 class="mt-4">Production Plant</h3>
       <div class="my-1">
-        <input type="text" [(ngModel)]="client.indirizzoSedeOperativa.via" class="form-control" name="indirizzoSedeOperativa.via"
+        <input type="text" [(ngModel)]="newclient.indirizzoSedeOperativa.via" class="form-control" name="indirizzoSedeOperativa.via"
           placeholder="Street...">
       </div>
       <div class="my-1">
-        <input type="text" [(ngModel)]="client.indirizzoSedeOperativa.civico" class="form-control" name="indirizzoSedeOperativa.civico"
+        <input type="text" [(ngModel)]="newclient.indirizzoSedeOperativa.civico" class="form-control" name="indirizzoSedeOperativa.civico"
           placeholder="Street Nr...">
       </div>
       <div class="my-1">
-        <input type="text" [(ngModel)]="client.indirizzoSedeOperativa.cap" class="form-control" name="indirizzoSedeOperativa.cap"
+        <input type="text" [(ngModel)]="newclient.indirizzoSedeOperativa.cap" class="form-control" name="indirizzoSedeOperativa.cap"
           placeholder="ZIP Code...">
       </div>
       <div class="my-1">
-        <input type="text" [(ngModel)]="client.indirizzoSedeOperativa.localita" class="form-control" name="indirizzoSedeOperativa.localita"
+        <input type="text" [(ngModel)]="newclient.indirizzoSedeOperativa.localita" class="form-control" name="indirizzoSedeOperativa.localita"
           placeholder="City...">
       </div>
-     
+      <div class="my-1">
+        <p>Select Municipality:</p>
+        <select class="custom-select" [(ngModel)]="newclient.indirizzoSedeOperativa.comune" name="indirizzoSedeOperativa.comune.nome">
+          <option [ngValue]="item" *ngFor="let item of municipalities">{{item.nome}}</option>
+        </select>
+      </div>
       <div class="my-1">
         <p>Select Province:</p>
-        <select class="form-select" [(ngModel)]="client.indirizzoSedeOperativa.comune" name="indirizzoSedeOperativa.comune">
-          <option selected>Choose Province</option>
+        <select class="custom-select" [(ngModel)]="newclient.indirizzoSedeOperativa.comune.provincia" name="indirizzoSedeOperativa.comune.provincia.nome">
           <option [ngValue]="item" *ngFor="let item of provinces">{{item.nome}}</option>
         </select>
       </div>
       <h3 class="mt-4">Headquarter</h3>
       <div class="my-1">
-        <input type="text" [(ngModel)]="client.indirizzoSedeLegale.via" class="form-control" name="email"
-          placeholder="Email...">
+        <input type="text" [(ngModel)]="newclient.indirizzoSedeLegale.via" class="form-control" name="indirizzoSedeLegale.via"
+          placeholder="Street...">
       </div>
       <div class="my-1">
-        <input type="text" [(ngModel)]="client.indirizzoSedeLegale.civico" class="form-control" name="phone"
-          placeholder="Phone...">
+        <input type="text" [(ngModel)]="newclient.indirizzoSedeLegale.civico" class="form-control" name="indirizzoSedeLegale.civico"
+          placeholder="Street Nr...">
       </div>
       <div class="my-1">
-        <input type="text" [(ngModel)]="client.indirizzoSedeLegale.cap" class="form-control" name="website"
-          placeholder="Website...">
+        <input type="text" [(ngModel)]="newclient.indirizzoSedeLegale.cap" class="form-control" name="indirizzoSedeLegale.cap"
+          placeholder="ZIP Code...">
       </div>
       <div class="my-1">
-        <input type="text" [(ngModel)]="client.indirizzoSedeLegale.localita" class="form-control" name="email"
-          placeholder="Email...">
+        <input type="text" [(ngModel)]="newclient.indirizzoSedeLegale.localita" class="form-control" name="indirizzoSedeLegale.localita"
+          placeholder="City...">
       </div>
       <div class="my-1">
-        <input type="text" [(ngModel)]="client.indirizzoSedeLegale.comune.nome" class="form-control" name="phone"
-          placeholder="Phone...">
+        <p>Select Municipality:</p>
+        <select class="custom-select" [(ngModel)]="newclient.indirizzoSedeLegale.comune" name="indirizzoSedeLegale.comune.nome">
+          <option [ngValue]="item" *ngFor="let item of municipalities">{{item.nome}}</option>
+        </select>
       </div>
       <div class="my-1">
-        <input type="text" [(ngModel)]="client.indirizzoSedeLegale.comune.provincia.nome" class="form-control"
-          name="website" placeholder="Website...">
-      </div>
-      <div class="my-1">
-        <input type="text" [(ngModel)]="client.indirizzoSedeLegale.comune.provincia.sigla" class="form-control"
-          name="website" placeholder="Website...">
+        <p>Select Province:</p>
+        <select class="custom-select" [(ngModel)]="newclient.indirizzoSedeLegale.comune.provincia" name="indirizzoSedeLegale.comune.provincia.nome">
+          <option [ngValue]="item" *ngFor="let item of provinces">{{item.nome}}</option>
+        </select>
       </div>
 
       <div class="my-4 text-center">

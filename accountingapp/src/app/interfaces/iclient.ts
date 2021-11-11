@@ -1,11 +1,11 @@
 export interface Iclient {
             id: number;
             ragioneSociale: string;
-            partitaIva: number;
+            partitaIva: string;
             tipoCliente: string;
             email: string;
             pec: string;
-            telefono: number;
+            telefono: string;
             nomeContatto: string;
             cognomeContatto: string;
             telefonoContatto: string;
@@ -13,8 +13,8 @@ export interface Iclient {
             indirizzoSedeOperativa: {
                 id: number;
                 via: string;
-                civico: number;
-                cap: number;
+                civico: string;
+                cap: string;
                 localita: string;
                 comune: {
                     id: number;
@@ -29,8 +29,8 @@ export interface Iclient {
             indirizzoSedeLegale: {
                 id: number;
                 via: string;
-                civico: number;
-                cap: number;
+                civico: string;
+                cap: string;
                 localita: string;
                 comune: {
                     id: number;
@@ -42,8 +42,8 @@ export interface Iclient {
                     }
                 }
             },
-            dataInserimento?: Date;
-            dataUltimoContatto?: Date;
-            fatturatoAnnuale: number
+            dataInserimento: string;
+            dataUltimoContatto: string;
+            fatturatoAnnuale: string
 }
 

@@ -3,6 +3,7 @@ import { environment } from '../../environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Iclienttable } from '../interfaces/iclienttable';
 import { Iclient } from '../interfaces/iclient';
+import { INEWclient } from '../interfaces/i-newclient';
 
 
 @Injectable({
@@ -14,7 +15,7 @@ export class ClientserviceService {
   urlAPIDetail = environment.urlAPI + '/api/clienti/';
   urlAPIUpdate = environment.urlAPI + '/api/clienti/';
   urlAPIDelete = environment.urlAPI + '/api/clienti/';
-  urlAPICreate = environment.urlAPI + '/api/clienti/';
+  urlAPICreate = environment.urlAPI + '/api/clienti';
   bearerAuth = 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTYzNjM4NzQzNCwiZXhwIjoxNjM3MjUxNDM0fQ.kA_vFKsUjBx0R6cuXlpVFr4Acsu5xciEr3CnAf19GLr9Rer_k6NmKOuvzk6BLZ_BnPY5-XG2Ztp0LbVcl8lMNw';
   tenantID = 'fe_0421';
   headers = new HttpHeaders();
@@ -30,7 +31,7 @@ export class ClientserviceService {
     return this.http.get<Iclient>(this.urlAPIDetail+id);
   }
 
-  createClient(item: Iclient) {
+  createClient(item: INEWclient) {
     return this.http.post(this.urlAPICreate, item);
   }
 
