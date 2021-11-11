@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Iclient } from '../interfaces/iclient';
-import { Imunicipalities } from '../interfaces/imunicipalities';
-import { Iprovinces } from '../interfaces/iprovinces';
 import { ClientserviceService } from '../services/clientservice.service';
-import { Iclienttypes } from '../interfaces/iclienttypes';
 import { ClientTypeServiceService } from '../services/client-type-service.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MunicipalityserviceService } from '../services/municipalityservice.service';
@@ -18,7 +15,7 @@ import { INEWclient } from '../interfaces/i-newclient';
 export class AddclientComponent implements OnInit {
 
   title!: string;
-  
+
   municipalities: any = [];
 
   provinces: any = [];
@@ -129,10 +126,10 @@ export class AddclientComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe(element => {
-      if(!element.id) {
+      if (!element.id) {
         this.title = "New Client";
       }
-      if(element.id) {
+      if (element.id) {
         this.clientService.getClient(element.id).subscribe(response => this.client = response)
       }
     })
@@ -141,23 +138,23 @@ export class AddclientComponent implements OnInit {
     this.getClientTypes()
   }
 
-  getMunicipalities(){
-    this.municipalityService.getAllMunicipalities().subscribe(response => 
+  getMunicipalities() {
+    this.municipalityService.getAllMunicipalities().subscribe(response =>
       this.municipalities = response.content);
   }
 
-  getProvinces(){
-    this.provinceService.getAllProvinces().subscribe(response => 
+  getProvinces() {
+    this.provinceService.getAllProvinces().subscribe(response =>
       this.provinces = response.content);
   }
 
-  getClientTypes(){
-    this.clientTypeService.getAllTypes().subscribe(response => 
+  getClientTypes() {
+    this.clientTypeService.getAllTypes().subscribe(response =>
       this.clientTypes = response);
   }
 
   saveClient() {
-    if(!this.newclient.dataUltimoContatto) {
+    if (!this.newclient.dataUltimoContatto) {
       console.log('Create Client');
       console.log(this.newclient.tipoCliente);
       this.clientService.createClient(this.newclient).subscribe(response => console.log(response));

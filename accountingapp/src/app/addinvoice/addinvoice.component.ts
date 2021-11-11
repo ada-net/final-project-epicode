@@ -10,12 +10,14 @@ import { PaidStatusServiceService } from '../services/paid-status-service.servic
 import { Iclienttable } from '../interfaces/iclienttable';
 import { ClientserviceService } from '../services/clientservice.service';
 
+
 @Component({
-  selector: 'app-editinvoice',
-  templateUrl: './editinvoice.component.html',
-  styleUrls: ['./editinvoice.component.css']
+  selector: 'app-addinvoice',
+  templateUrl: './addinvoice.component.html',
+  styleUrls: ['./addinvoice.component.css']
 })
-export class EditinvoiceComponent implements OnInit {
+export class AddinvoiceComponent implements OnInit {
+
   title!: string;
 
   invoiceStatuses: any = [];
@@ -29,56 +31,68 @@ export class EditinvoiceComponent implements OnInit {
     anno: 1,
     importo: 1,
     stato: {
-      id: 1,
-      nome: '',
+        id: 1,
+        nome: '',
     },
     cliente: {
+        id: 1,
+        ragioneSociale: '',
+        partitaIva: '',
+        tipoCliente: '',
+        email: '',
+        pec: '',
+        telefono: '',
+        nomeContatto: '',
+        cognomeContatto: '',
+        telefonoContatto: '',
+        emailContatto: '',
+        indirizzoSedeOperativa: {
+            id: 1,
+            via: '',
+            civico: '',
+            cap: '',
+            localita: '',
+                comune: {
+                id: 1,
+                nome: '',
+                provincia: {
+                    id: 1,
+                    nome: '',
+                    sigla: '',
+                }
+            }
+        },
+        indirizzoSedeLegale: {
+            id: 1,
+            via: '',
+            civico: '',
+            cap: '',
+            localita: '',
+            comune: {
+                id: 1,
+                nome: '',
+                provincia: {
+                    id: 1,
+                    nome: '',
+                    sigla: ''
+                }
+            }
+        },
+        dataInserimento: '',
+        dataUltimoContatto: '',
+        fatturatoAnnuale: 1
+    }
+  }
+
+  newInvoice: Inewinvoice = {
+    id: 1,
+    data: '',
+    numero: 1,
+    anno: 1,
+    importo: 1,
+    stato: {
       id: 1,
-      ragioneSociale: '',
-      partitaIva: '',
-      tipoCliente: '',
-      email: '',
-      pec: '',
-      telefono: '',
-      nomeContatto: '',
-      cognomeContatto: '',
-      telefonoContatto: '',
-      emailContatto: '',
-      indirizzoSedeOperativa: {
-        id: 1,
-        via: '',
-        civico: '',
-        cap: '',
-        localita: '',
-        comune: {
-          id: 1,
-          nome: '',
-          provincia: {
-            id: 1,
-            nome: '',
-            sigla: '',
-          }
-        }
-      },
-      indirizzoSedeLegale: {
-        id: 1,
-        via: '',
-        civico: '',
-        cap: '',
-        localita: '',
-        comune: {
-          id: 1,
-          nome: '',
-          provincia: {
-            id: 1,
-            nome: '',
-            sigla: ''
-          }
-        }
-      },
-      dataInserimento: '',
-      dataUltimoContatto: '',
-      fatturatoAnnuale: 1
+      nome: ''
     }
   }
 
@@ -114,18 +128,17 @@ export class EditinvoiceComponent implements OnInit {
   }
 
   saveInvoice() {
-    console.log('Update Invoice');
-    this.invoiceService.updateInvoice(this.invoice).subscribe(response => console.log(response));
+    if (!this.newInvoice.id) {
+      console.log('Create Invoice');
+      this.invoiceService.createInvoice(this.newInvoice).subscribe(response => console.log(response));
+    } else {
+      console.log('Update Invoice');
+      this.invoiceService.updateInvoice(this.invoice).subscribe(response => console.log(response));
+    }
     this.router.navigate(['clients/list']);
   }
 
-
 }
-
-
-
-
-
 
 
 

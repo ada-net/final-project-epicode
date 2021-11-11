@@ -3,7 +3,7 @@
 export interface Iinvoice {
 
     id: number;
-    data: Date;
+    data: string;
     numero: number;
     anno: number;
     importo: number;
@@ -14,7 +14,7 @@ export interface Iinvoice {
     cliente: {
         id: number;
         ragioneSociale: string;
-        partitaIva: number;
+        partitaIva: string;
         tipoCliente: string;
         email: string;
         pec: string;
@@ -26,8 +26,8 @@ export interface Iinvoice {
         indirizzoSedeOperativa: {
             id: number;
             via: string;
-            civico: number;
-            cap: number;
+            civico: string;
+            cap: string;
             localita: string;
                 comune: {
                 id: number;
@@ -42,8 +42,8 @@ export interface Iinvoice {
         indirizzoSedeLegale: {
             id: number;
             via: string;
-            civico: number;
-            cap: number;
+            civico: string;
+            cap: string;
             localita: string;
             comune: {
                 id: number;
@@ -55,8 +55,8 @@ export interface Iinvoice {
                 }
             }
         },
-        dataInserimento: Date;
-        dataUltimoContatto: Date;
+        dataInserimento: string;
+        dataUltimoContatto: string;
         fatturatoAnnuale: number;
     }
 }

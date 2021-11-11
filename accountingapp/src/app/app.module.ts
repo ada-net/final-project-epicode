@@ -20,6 +20,7 @@ import { EditinvoiceComponent } from './editinvoice/editinvoice.component';
 import { NewProvinceMunicipalityComponent } from './new-province-municipality/new-province-municipality.component';
 import { EditProvinceMunicipalityComponent } from './edit-province-municipality/edit-province-municipality.component';
 import { ListProvincesMunicipalitiesComponent } from './list-provinces-municipalities/list-provinces-municipalities.component';
+import { AddinvoiceComponent } from './addinvoice/addinvoice.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { ListProvincesMunicipalitiesComponent } from './list-provinces-municipal
     NewProvinceMunicipalityComponent,
     EditProvinceMunicipalityComponent,
     ListProvincesMunicipalitiesComponent,
+    AddinvoiceComponent,
     
   ],
   imports: [
