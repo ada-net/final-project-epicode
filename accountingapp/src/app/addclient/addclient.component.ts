@@ -129,12 +129,12 @@ export class AddclientComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe(element => {
-      /*if(!element.id) {
+      if(!element.id) {
         this.title = "New Client";
       }
       if(element.id) {
         this.clientService.getClient(element.id).subscribe(response => this.client = response)
-      }*/
+      }
     })
     this.getMunicipalities();
     this.getProvinces();
@@ -155,8 +155,6 @@ export class AddclientComponent implements OnInit {
     this.clientTypeService.getAllTypes().subscribe(response => 
       this.clientTypes = response);
   }
-
-  editClient() {}
 
   saveClient() {
     if(!this.newclient.dataUltimoContatto) {
