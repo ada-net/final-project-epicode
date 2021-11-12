@@ -20,8 +20,7 @@ export class AddinvoiceComponent implements OnInit {
 
   title!: string;
 
-  invoiceStatus!: IinvoiceStatus;
-  //invoiceStatus: IinvoiceStatus[] = [];
+  invoiceStatuses: any = [];
 
   clientlist!: Iclienttable;
 
@@ -120,7 +119,7 @@ export class AddinvoiceComponent implements OnInit {
 
   getInvoiceStatuses() {
     this.statusService.getAllStatuses().subscribe(response =>
-      this.invoiceStatus = response);
+      this.invoiceStatuses = response);
   }
 
   getClients() {
