@@ -22,7 +22,7 @@ export class AddinvoiceComponent implements OnInit {
 
   invoiceStatuses: any = [];
 
-  clientlist!: Iclienttable;
+  clientlist: any = [];
 
   invoice: Iinvoice = {
     id: 1,
@@ -85,7 +85,6 @@ export class AddinvoiceComponent implements OnInit {
   }
 
   newInvoice: Inewinvoice = {
-    id: 1,
     data: '',
     numero: 1,
     anno: 1,
@@ -93,6 +92,10 @@ export class AddinvoiceComponent implements OnInit {
     stato: {
       id: 1,
       nome: ''
+    },
+    cliente:
+    {
+      id: 1
     }
   }
 
@@ -106,12 +109,12 @@ export class AddinvoiceComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe(element => {
-      if (!element.id) {
+     /* if (!element.id) {
         this.title = "New Invoice";
       }
       if (element.id) {
         this.invoiceService.getInvoice(element.id).subscribe(response => this.invoice = response)
-      }
+      }*/
     })
     this.getInvoiceStatuses();
     this.getClients();
@@ -127,14 +130,8 @@ export class AddinvoiceComponent implements OnInit {
   }
 
   saveInvoice() {
-    if (!this.newInvoice.id) {
-      console.log('Create Invoice');
-      this.invoiceService.createInvoice(this.newInvoice).subscribe(response => console.log(response));
-    } else {
-      console.log('Update Invoice');
-      this.invoiceService.updateInvoice(this.invoice).subscribe(response => console.log(response));
-    }
-    this.router.navigate(['clients/list']);
+    this.invoiceService.createInvoice(this.newInvoice).subscribe(response => console.log(response));
+    this.router.navigate(['invoices/list']);
   }
 
 }

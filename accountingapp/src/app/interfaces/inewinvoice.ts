@@ -1,5 +1,4 @@
 export interface Inewinvoice {
-        id: number;
         data: string;
         numero: number;
         anno: number;
@@ -7,5 +6,9 @@ export interface Inewinvoice {
         stato: {
             id: number;
             nome: string;
+        }, 
+        cliente:
+        {
+            id: number
         }
 }
