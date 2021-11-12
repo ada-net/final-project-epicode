@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { InvoicesService } from '../services/invoices.service';
-import { Iinvoicetable } from '../interfaces/iinvoicetable';
 import { Iinvoice } from '../interfaces/iinvoice';
 import { ActivatedRoute, Router } from '@angular/router';
 

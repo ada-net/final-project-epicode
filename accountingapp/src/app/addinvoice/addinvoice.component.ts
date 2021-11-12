@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { InvoicesService } from '../services/invoices.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Inewinvoice } from '../interfaces/inewinvoice';
-import { Iinvoice } from '../interfaces/iinvoice';
 import { PaidStatusServiceService } from '../services/paid-status-service.service';
 import { ClientserviceService } from '../services/clientservice.service';
 

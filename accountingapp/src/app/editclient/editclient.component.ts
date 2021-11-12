@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ClientserviceService } from './../services/clientservice.service';
 import { Iclient } from '../interfaces/iclient';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Imunicipalities } from '../interfaces/imunicipalities';
-import { Iprovinces } from '../interfaces/iprovinces';
 import { ClientTypeServiceService } from '../services/client-type-service.service';
 import { MunicipalityserviceService } from '../services/municipalityservice.service';
 import { ProvinceserviceService } from '../services/provinceservice.service';

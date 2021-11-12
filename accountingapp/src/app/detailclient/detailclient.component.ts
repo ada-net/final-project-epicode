@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ClientserviceService } from './../services/clientservice.service';
-import { Iclienttable } from '../interfaces/iclienttable';
 import { Iclient } from '../interfaces/iclient';
 import { ActivatedRoute, Router } from '@angular/router';
 
