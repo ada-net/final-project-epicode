@@ -3,44 +3,44 @@
     <div class="mt-5">
 
         <h3>General Info</h3>
-        <p>Client Number: {{ detailClient.id }}</p>
-        <p>Client Name: {{ detailClient.ragioneSociale }}</p>
-        <p>Tax Number: {{ detailClient.partitaIva }}</p>
-        <p>Client Type: {{ detailClient.tipoCliente }}</p>
-        <p>Client Email: {{ detailClient.email }}</p>
-        <p>Client PEC: {{ detailClient.pec }}</p>
-        <p>Client Phone: {{ detailClient.telefono }}</p>
+        <p><strong>Client Number:</strong> {{ detailClient.id }}</p>
+        <p><strong>Client Name:</strong> {{ detailClient.ragioneSociale }}</p>
+        <p><strong>Tax Number:</strong> {{ detailClient.partitaIva }}</p>
+        <p><strong>Client Type:</strong> {{ detailClient.tipoCliente }}</p>
+        <p><strong>Client Email:</strong> {{ detailClient.email }}</p>
+        <p><strong>Client PEC:</strong> {{ detailClient.pec }}</p>
+        <p><strong>Client Phone:</strong> {{ detailClient.telefono }}</p>
 
         <h3 class="mt-5">Contact Person Details</h3>
-        <p>Client Contact Name: {{ detailClient.nomeContatto }}</p>
-        <p>Client Contact Phone: {{ detailClient.telefonoContatto }}</p>
-        <p>Client Contact Email: {{ detailClient.emailContatto }}</p>
+        <p><strong>Client Contact Name:</strong> {{ detailClient.nomeContatto }}</p>
+        <p><strong>Client Contact Phone:</strong> {{ detailClient.telefonoContatto }}</p>
+        <p><strong>Client Contact Email:</strong> {{ detailClient.emailContatto }}</p>
 
         <h3 class="mt-5">Production Plant</h3>
-        <p>ID: {{ detailClient.indirizzoSedeOperativa.id }}</p>
-        <p>Street: {{ detailClient.indirizzoSedeOperativa.via }}, {{ detailClient.indirizzoSedeOperativa.civico }}</p>
-        <p>Postal Code: {{ detailClient.indirizzoSedeOperativa.cap }}</p>
-        <p>City: {{ detailClient.indirizzoSedeOperativa.localita }}</p>
-        <p>Municipality ID: {{ detailClient.indirizzoSedeOperativa.comune.id }}</p>
-        <p>Municipality Name: {{ detailClient.indirizzoSedeOperativa.comune.nome }}</p>
-        <p>Province Name: {{ detailClient.indirizzoSedeOperativa.comune.provincia.nome }}</p>
-        <p>Province ID: {{ detailClient.indirizzoSedeOperativa.comune.provincia.id }}</p>
-        <p>Province Short: {{ detailClient.indirizzoSedeOperativa.comune.provincia.sigla }}</p>
+        <p><strong>ID:</strong> {{ detailClient.indirizzoSedeOperativa.id }}</p>
+        <p><strong>Street:</strong> {{ detailClient.indirizzoSedeOperativa.via }}, {{ detailClient.indirizzoSedeOperativa.civico }}</p>
+        <p><strong>Postal Code:</strong> {{ detailClient.indirizzoSedeOperativa.cap }}</p>
+        <p><strong>City:</strong> {{ detailClient.indirizzoSedeOperativa.localita }}</p>
+        <p><strong>Municipality ID:</strong> {{ detailClient.indirizzoSedeOperativa.comune.id }}</p>
+        <p><strong>Municipality Name:</strong> {{ detailClient.indirizzoSedeOperativa.comune.nome }}</p>
+        <p><strong>Province Name:</strong> {{ detailClient.indirizzoSedeOperativa.comune.provincia.nome }}</p>
+        <p><strong>Province ID:</strong> {{ detailClient.indirizzoSedeOperativa.comune.provincia.id }}</p>
+        <p><strong>Province Code:</strong> {{ detailClient.indirizzoSedeOperativa.comune.provincia.sigla }}</p>
 
         <h3 class="mt-5">Headquarter Info</h3>
-        <p>ID: {{ detailClient.indirizzoSedeLegale.id }}</p>
-        <p>Street: {{ detailClient.indirizzoSedeLegale.via }}, {{ detailClient.indirizzoSedeLegale.civico }}</p>
-        <p>Postal Code: {{ detailClient.indirizzoSedeLegale.cap }}</p>
-        <p>City: {{ detailClient.indirizzoSedeLegale.localita }}</p>
-        <p>Municipality ID: {{ detailClient.indirizzoSedeLegale.comune.id }}</p>
-        <p>Municipality Name: {{ detailClient.indirizzoSedeLegale.comune.nome }}</p>
-        <p>Province Name: {{ detailClient.indirizzoSedeLegale.comune.provincia.nome }}</p>
-        <p>Province ID: {{ detailClient.indirizzoSedeLegale.comune.provincia.id }}</p>
-        <p>Province Short: {{ detailClient.indirizzoSedeLegale.comune.provincia.sigla }}</p>
+        <p><strong>ID:</strong> {{ detailClient.indirizzoSedeLegale.id }}</p>
+        <p><strong>Street:</strong> {{ detailClient.indirizzoSedeLegale.via }}, {{ detailClient.indirizzoSedeLegale.civico }}</p>
+        <p><strong>Postal Code:</strong> {{ detailClient.indirizzoSedeLegale.cap }}</p>
+        <p><strong>City:</strong> {{ detailClient.indirizzoSedeLegale.localita }}</p>
+        <p><strong>Municipality ID:</strong> {{ detailClient.indirizzoSedeLegale.comune.id }}</p>
+        <p><strong>Municipality Name:</strong> {{ detailClient.indirizzoSedeLegale.comune.nome }}</p>
+        <p><strong>Province Name:</strong> {{ detailClient.indirizzoSedeLegale.comune.provincia.nome }}</p>
+        <p><strong>Province ID</strong>: {{ detailClient.indirizzoSedeLegale.comune.provincia.id }}</p>
+        <p><strong>Province Code:</strong> {{ detailClient.indirizzoSedeLegale.comune.provincia.sigla }}</p>
 
         <h3 class="mt-5">Other</h3>
-        <p>Date registered: {{ detailClient.dataInserimento }}</p>
-        <p>Date last contacted: {{ detailClient.dataUltimoContatto }}</p>
-        <p>Annual turnover: {{ detailClient.fatturatoAnnuale }}</p>
+        <p><strong>Date registered:</strong> {{ detailClient.dataInserimento }}</p>
+        <p><strong>Date last contacted:</strong> {{ detailClient.dataUltimoContatto }}</p>
+        <p><strong>Annual turnover:</strong> {{ detailClient.fatturatoAnnuale }}</p>
 
     </div>

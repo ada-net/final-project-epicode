@@ -10,7 +10,7 @@ import { Inewinvoice } from '../interfaces/inewinvoice';
 })
 export class InvoicesService {
 
-  urlAPI = environment.urlAPI + '/api/fatture?page=0&size=100&sort=anno,ASC';
+  urlAPI = environment.urlAPI + '/api/fatture?page=0&size=500&sort=anno,ASC';
   urlAPIDetail = environment.urlAPI + '/api/fatture/';
   urlAPIDelete = environment.urlAPI + '/api/fatture/';
   urlAPICreate = environment.urlAPI + '/api/fatture';

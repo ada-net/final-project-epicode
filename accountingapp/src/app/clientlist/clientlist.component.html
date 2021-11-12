@@ -1,7 +1,7 @@
-<div class="container">
-    <h1>Client Overview</h1>
-    <table class="table">
-        <thead>
+<div class="container d-flex flex-column align-items-center justify-content-center">
+    <h1 class="mt-5">Client Overview</h1>
+    <table class="table text-center mt-5 table-hover">
+        <thead class="thead-dark">
             <tr>
                 <th scope="col">Nr.</th>
                 <th scope="col">Client Name</th>
@@ -9,6 +9,9 @@
                 <th scope="col">Type</th>
                 <th scope="col">Email</th>
                 <th scope="col">Phone</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
@@ -19,18 +22,15 @@
                 <td scope="row">{{item.tipoCliente}}</td>
                 <td scope="row">{{item.email}}</td>
                 <td scope="row">{{item.telefono}}</td>
-                <td>
-                    <button type="button" class="btn btn-info" (click)="viewClient(item)"><i
+                <td scope="row"><button type="button" class="btn-sm btn-info" (click)="viewClient(item)"><i
                             class="bi bi-info-circle"></i>
-                    </button>
-                    <button type="button" class="btn btn-warning" (click)="editClient(item)"><i
+                    </button></td>
+                <td scope="row"><button type="button" class="btn-sm btn-warning" (click)="editClient(item)"><i
                             class="bi bi-pencil"></i>
-                    </button>
-                    <button type="button" class="btn btn-danger" (click)="removeClient(item)"><i
+                    </button></td>
+                <td scope="row"> <button type="button" class="btn-sm btn-danger" (click)="removeClient(item)"><i
                             class="bi bi-person-x-fill"></i>
-                    </button>
-
-                </td>
+                    </button></td>
             </tr>
         </tbody>
     </table>

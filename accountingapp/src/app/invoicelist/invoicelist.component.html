@@ -1,13 +1,16 @@
-<div class="container">
-    <h1>Invoices Overview</h1>
-    <table class="table">
-        <thead>
+<div class="container d-flex flex-column align-items-center justify-content-center">
+    <h1 class="mt-5">Invoices Overview</h1>
+    <table class="table text-center mt-5 table-hover">
+        <thead class="thead-dark">
             <tr>
                 <th scope="col">Nr.</th>
                 <th scope="col">Year</th>
                 <th scope="col">Amount</th>
                 <th scope="col">Paid Status</th>
                 <th scope="col">Client (ID)</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
@@ -17,13 +20,16 @@
                 <td scope="row">{{item.importo}}</td>
                 <td scope="row">{{item.stato.nome}}</td>
                 <td scope="row">{{item.cliente.id}}</td>
-                <button type="button" class="btn btn-info" (click)="viewInvoice(item)"><i class="bi bi-info-circle"></i>
-                </button>
-                <button type="button" class="btn btn-warning" (click)="editInvoice(item)"><i class="bi bi-pencil"></i>
-                </button>
-                <button type="button" class="btn btn-danger" (click)="removeInvoice(item)"><i
-                        class="bi bi-trash-fill"></i>
-                </button>
+                <td scope="row"><button type="button" class="btn-sm btn-info" (click)="viewInvoice(item)"><i
+                            class="bi bi-info-circle"></i>
+                    </button></td>
+                <td scope="row"><button type="button" class="btn-sm btn-warning" (click)="editInvoice(item)"><i
+                            class="bi bi-pencil"></i>
+                    </button></td>
+                <td scope="row"><button type="button" class="btn-sm btn-danger" (click)="removeInvoice(item)"><i
+                            class="bi bi-trash-fill"></i>
+                    </button></td>
+
             </tr>
         </tbody>
     </table>

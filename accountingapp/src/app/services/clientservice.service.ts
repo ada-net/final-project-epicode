@@ -11,7 +11,7 @@ import { INEWclient } from '../interfaces/i-newclient';
 })
 
 export class ClientserviceService {
-  urlAPI = environment.urlAPI + '/api/clienti?size=150&sort=id,ASC';
+  urlAPI = environment.urlAPI + '/api/clienti?size=200&sort=id,ASC';
   urlAPIDetail = environment.urlAPI + '/api/clienti/';
   urlAPIUpdate = environment.urlAPI + '/api/clienti/';
   urlAPIDelete = environment.urlAPI + '/api/clienti/';
