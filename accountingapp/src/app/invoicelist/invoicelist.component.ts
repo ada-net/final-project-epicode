@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class InvoicelistComponent implements OnInit {
 
   invoices!: Iinvoicetable;
-  invoicesForFilter: Iinvoice[]=[];
+  invoicesForFilter: Iinvoice[] = [];
 
   constructor(private invoiceService: InvoicesService, private router: Router) { }
 

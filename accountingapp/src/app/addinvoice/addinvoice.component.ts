@@ -31,56 +31,56 @@ export class AddinvoiceComponent implements OnInit {
     anno: 1,
     importo: 1,
     stato: {
-        id: 1,
-        nome: '',
+      id: 1,
+      nome: '',
     },
     cliente: {
+      id: 1,
+      ragioneSociale: '',
+      partitaIva: '',
+      tipoCliente: '',
+      email: '',
+      pec: '',
+      telefono: '',
+      nomeContatto: '',
+      cognomeContatto: '',
+      telefonoContatto: '',
+      emailContatto: '',
+      indirizzoSedeOperativa: {
         id: 1,
-        ragioneSociale: '',
-        partitaIva: '',
-        tipoCliente: '',
-        email: '',
-        pec: '',
-        telefono: '',
-        nomeContatto: '',
-        cognomeContatto: '',
-        telefonoContatto: '',
-        emailContatto: '',
-        indirizzoSedeOperativa: {
+        via: '',
+        civico: '',
+        cap: '',
+        localita: '',
+        comune: {
+          id: 1,
+          nome: '',
+          provincia: {
             id: 1,
-            via: '',
-            civico: '',
-            cap: '',
-            localita: '',
-                comune: {
-                id: 1,
-                nome: '',
-                provincia: {
-                    id: 1,
-                    nome: '',
-                    sigla: '',
-                }
-            }
-        },
-        indirizzoSedeLegale: {
+            nome: '',
+            sigla: '',
+          }
+        }
+      },
+      indirizzoSedeLegale: {
+        id: 1,
+        via: '',
+        civico: '',
+        cap: '',
+        localita: '',
+        comune: {
+          id: 1,
+          nome: '',
+          provincia: {
             id: 1,
-            via: '',
-            civico: '',
-            cap: '',
-            localita: '',
-            comune: {
-                id: 1,
-                nome: '',
-                provincia: {
-                    id: 1,
-                    nome: '',
-                    sigla: ''
-                }
-            }
-        },
-        dataInserimento: '',
-        dataUltimoContatto: '',
-        fatturatoAnnuale: 1
+            nome: '',
+            sigla: ''
+          }
+        }
+      },
+      dataInserimento: '',
+      dataUltimoContatto: '',
+      fatturatoAnnuale: 1
     }
   }
 

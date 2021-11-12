@@ -6,14 +6,16 @@
 
         <div class="form-group mb-3">
             <label for="username" class="ml-2">Username</label>
-            <input type="text" name="username" formControlName="username" class="form-control"  placeholder="">
-            <div *ngIf="form.controls.username.touched &&   !form.controls.username.valid" class="alert alert-danger"> Username is required </div>
+            <input type="text" name="username" formControlName="username" class="form-control" placeholder="">
+            <div *ngIf="form.controls.username.touched &&   !form.controls.username.valid" class="alert alert-danger">
+                Username is required </div>
         </div>
 
         <div class="form-group">
-            <label for="password" class="ml-2" >Password</label>
-            <input type="text" name="password" formControlName="password" class="form-control"  placeholder="">
-            <div *ngIf="form.controls.password.touched && !form.controls.password.valid" class="alert alert-danger"> Password is required </div>
+            <label for="password" class="ml-2">Password</label>
+            <input type="text" name="password" formControlName="password" class="form-control" placeholder="">
+            <div *ngIf="form.controls.password.touched && !form.controls.password.valid" class="alert alert-danger">
+                Password is required </div>
         </div>
 
         <button class="btn btn-lg btn-primary mt-5" type="submit" (ngSubmit)="login()">Go!</button>

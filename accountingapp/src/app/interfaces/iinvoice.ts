@@ -1,5 +1,3 @@
-
-
 export interface Iinvoice {
 
     id: number;
@@ -29,7 +27,7 @@ export interface Iinvoice {
             civico: string;
             cap: string;
             localita: string;
-                comune: {
+            comune: {
                 id: number;
                 nome: string;
                 provincia: {

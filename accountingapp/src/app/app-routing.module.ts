@@ -16,48 +16,50 @@ import { AddinvoiceComponent } from './addinvoice/addinvoice.component';
 
 const routes: Routes = [
   {
-    path: 'clients/list', 
+    path: 'clients/list',
     component: ClientlistComponent
   },
-  { path: '',
+  {
+    path: '',
     pathMatch: 'full',
     redirectTo: 'clients/list'
-  }, 
-  { path: 'login',
-    component: LoginComponent
-  }, 
+  },
   {
-    path: 'clients/new', 
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'clients/new',
     component: AddclientComponent
   },
   {
-    path: 'clients/:id/edit', 
+    path: 'clients/:id/edit',
     component: EditclientComponent
   },
   {
-    path: 'clients/:id/detail', 
+    path: 'clients/:id/detail',
     component: DetailclientComponent
   },
   {
-    path: 'invoices/new', 
+    path: 'invoices/new',
     component: AddinvoiceComponent
   },
   {
-    path: 'invoices/list', 
+    path: 'invoices/list',
     component: InvoicelistComponent
   },
   {
-    path: 'invoices/:id/detail', 
+    path: 'invoices/:id/detail',
     component: DetailinvoiceComponent
   },
   {
-    path: 'invoices/:id/edit', 
+    path: 'invoices/:id/edit',
     component: EditinvoiceComponent
   }
 ];
 
 @NgModule({
-  
+
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })

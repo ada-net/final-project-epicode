@@ -17,7 +17,7 @@ export class DetailclientComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe(element => {
-      if(element.id) {
+      if (element.id) {
         this.clientService.getClient(element.id).subscribe(client => this.detailClient = client);
       }
     });

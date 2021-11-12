@@ -40,7 +40,7 @@ import { AddinvoiceComponent } from './addinvoice/addinvoice.component';
     EditProvinceMunicipalityComponent,
     ListProvincesMunicipalitiesComponent,
     AddinvoiceComponent,
-    
+
   ],
   imports: [
     BrowserModule,

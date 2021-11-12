@@ -1,7 +1,7 @@
 <div class="container my-3 mt-5">
     <h1>Invoice Nr. {{detailInvoice.id}}, date: {{detailInvoice.data | date}}</h1>
     <div class="mt-5">
-        
+
         <h3>General Info</h3>
         <p>Invoice ID: {{detailInvoice.id}}</p>
         <p>Date Timestamp: {{detailInvoice.data}}</p>
@@ -26,7 +26,8 @@
 
         <h3 class="mt-5">Production Plant Info</h3>
         <p>ID: {{ detailInvoice.cliente.indirizzoSedeOperativa.id }}</p>
-        <p>Street: {{ detailInvoice.cliente.indirizzoSedeOperativa.via }}, {{ detailInvoice.cliente.indirizzoSedeOperativa.civico }}</p>
+        <p>Street: {{ detailInvoice.cliente.indirizzoSedeOperativa.via }}, {{
+            detailInvoice.cliente.indirizzoSedeOperativa.civico }}</p>
         <p>Postal Code: {{ detailInvoice.cliente.indirizzoSedeOperativa.cap }}</p>
         <p>City: {{ detailInvoice.cliente.indirizzoSedeOperativa.localita }}</p>
         <p>Municipality ID: {{ detailInvoice.cliente.indirizzoSedeOperativa.comune.id }}</p>
@@ -35,10 +36,11 @@
         <p>Province ID: {{ detailInvoice.cliente.indirizzoSedeOperativa.comune.provincia.id }}</p>
         <p>Province Short: {{ detailInvoice.cliente.indirizzoSedeOperativa.comune.provincia.sigla }}</p>
 
-        
+
         <h3 class="mt-5">Headquarter Info</h3>
         <p>ID: {{ detailInvoice.cliente.indirizzoSedeLegale.id }}</p>
-        <p>Street: {{ detailInvoice.cliente.indirizzoSedeLegale.via }}, {{ detailInvoice.cliente.indirizzoSedeLegale.civico }}</p>
+        <p>Street: {{ detailInvoice.cliente.indirizzoSedeLegale.via }}, {{
+            detailInvoice.cliente.indirizzoSedeLegale.civico }}</p>
         <p>Postal Code: {{ detailInvoice.cliente.indirizzoSedeLegale.cap }}</p>
         <p>City: {{ detailInvoice.cliente.indirizzoSedeLegale.localita }}</p>
         <p>Municipality ID: {{ detailInvoice.cliente.indirizzoSedeLegale.comune.id }}</p>
