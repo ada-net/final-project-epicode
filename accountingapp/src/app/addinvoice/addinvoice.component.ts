@@ -1,13 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Iclient } from '../interfaces/iclient';
 import { InvoicesService } from '../services/invoices.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Inewinvoice } from '../interfaces/inewinvoice';
 import { Iinvoice } from '../interfaces/iinvoice';
-import { IinvoiceStatus } from '../interfaces/iinvoice-status';
-import { IinvoiceStatuses } from '../interfaces/iinvoice-statuses';
 import { PaidStatusServiceService } from '../services/paid-status-service.service';
-import { Iclienttable } from '../interfaces/iclienttable';
 import { ClientserviceService } from '../services/clientservice.service';
 
 
@@ -23,66 +19,6 @@ export class AddinvoiceComponent implements OnInit {
   invoiceStatuses: any = [];
 
   clientlist: any = [];
-
-  invoice: Iinvoice = {
-    id: 1,
-    data: '',
-    numero: 1,
-    anno: 1,
-    importo: 1,
-    stato: {
-      id: 1,
-      nome: '',
-    },
-    cliente: {
-      id: 1,
-      ragioneSociale: '',
-      partitaIva: '',
-      tipoCliente: '',
-      email: '',
-      pec: '',
-      telefono: '',
-      nomeContatto: '',
-      cognomeContatto: '',
-      telefonoContatto: '',
-      emailContatto: '',
-      indirizzoSedeOperativa: {
-        id: 1,
-        via: '',
-        civico: '',
-        cap: '',
-        localita: '',
-        comune: {
-          id: 1,
-          nome: '',
-          provincia: {
-            id: 1,
-            nome: '',
-            sigla: '',
-          }
-        }
-      },
-      indirizzoSedeLegale: {
-        id: 1,
-        via: '',
-        civico: '',
-        cap: '',
-        localita: '',
-        comune: {
-          id: 1,
-          nome: '',
-          provincia: {
-            id: 1,
-            nome: '',
-            sigla: ''
-          }
-        }
-      },
-      dataInserimento: '',
-      dataUltimoContatto: '',
-      fatturatoAnnuale: 1
-    }
-  }
 
   newInvoice: Inewinvoice = {
     data: '',
@@ -109,12 +45,12 @@ export class AddinvoiceComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe(element => {
-     /* if (!element.id) {
-        this.title = "New Invoice";
-      }
-      if (element.id) {
-        this.invoiceService.getInvoice(element.id).subscribe(response => this.invoice = response)
-      }*/
+      /* if (!element.id) {
+         this.title = "New Invoice";
+       }
+       if (element.id) {
+         this.invoiceService.getInvoice(element.id).subscribe(response => this.invoice = response)
+       }*/
     })
     this.getInvoiceStatuses();
     this.getClients();

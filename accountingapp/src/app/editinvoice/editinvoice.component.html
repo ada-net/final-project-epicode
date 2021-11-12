@@ -24,13 +24,13 @@
             </div>
             <div class="my-3">
                 <p>Payment Status:</p>
-                <select class="custom-select" [(ngModel)]="invoice.stato.nome" name="invoiceState">
-                    <option [ngValue]="item" *ngFor="let item of invoiceStatuses">{{item}}</option>
+                <select class="custom-select" [(ngModel)]="invoice.stato" name="invoiceState">
+                    <option [ngValue]="item" *ngFor="let item of invoiceStatuses.content">{{item.nome}}</option>
                 </select>
             </div>
-            <p>Select Client ID:</p>
+            <p>Select Client Name:</p>
             <select class="custom-select" [(ngModel)]="invoice.cliente.id" name="client-id">
-                <option [ngValue]="item" *ngFor="let item of clientlist">{{item.id}}</option>
+                <option [ngValue]="item.id" *ngFor="let item of clientlist.content">{{item.ragioneSociale}}</option>
             </select>
         </div>
 

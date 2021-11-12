@@ -1,13 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Iclient } from '../interfaces/iclient';
 import { InvoicesService } from '../services/invoices.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Inewinvoice } from '../interfaces/inewinvoice';
 import { Iinvoice } from '../interfaces/iinvoice';
-import { IinvoiceStatus } from '../interfaces/iinvoice-status';
-import { IinvoiceStatuses } from '../interfaces/iinvoice-statuses';
 import { PaidStatusServiceService } from '../services/paid-status-service.service';
-import { Iclienttable } from '../interfaces/iclienttable';
 import { ClientserviceService } from '../services/clientservice.service';
 
 @Component({
@@ -92,13 +87,9 @@ export class EditinvoiceComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe(element => {
-      if (!element.id) {
-        this.title = "New Invoice";
-      }
-      if (element.id) {
-        this.invoiceService.getInvoice(element.id).subscribe(response => this.invoice = response)
-      }
+      this.invoiceService.getInvoice(element.id).subscribe(response => this.invoice = response)
     })
+
     this.getInvoiceStatuses();
     this.getClients();
   }
@@ -116,7 +107,7 @@ export class EditinvoiceComponent implements OnInit {
   saveInvoice() {
     console.log('Update Invoice');
     this.invoiceService.updateInvoice(this.invoice).subscribe(response => console.log(response));
-    this.router.navigate(['clients/list']);
+    this.router.navigate(['invoices/list']);
   }
 
 
