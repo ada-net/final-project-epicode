@@ -16,8 +16,6 @@ export class ClientlistComponent implements OnInit {
 
   clients!: Iclienttable;
   clientsForFilter: Iclient[] = [];
-
-
   constructor(private clientService: ClientserviceService, private router: Router) { }
 
   ngOnInit(): void {

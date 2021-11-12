@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { IinvoiceStatuses } from '../interfaces/iinvoice-statuses';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class PaidStatusServiceService {
 
   constructor(private http: HttpClient) { }
   getAllStatuses() {
-    return this.http.get(this.urlAPI);
+    return this.http.get<IinvoiceStatuses>(this.urlAPI);
   }
 }
 

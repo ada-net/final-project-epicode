@@ -2,31 +2,35 @@
     <h1 class="mb-4">New Invoice</h1>
     <form>
         <div>
-            <div class="my-1">
+            <div class="my-3">
+                <label>Invoice Date:</label>
                 <input type="text" [(ngModel)]="invoice.data" class="form-control" name="invoiceDate"
                     placeholder="Invoice Date...">
             </div>
-            <div class="my-1">
+            <div class="my-3">
+                <label>Invoice Nr.:</label>
                 <input type="text" [(ngModel)]="invoice.numero" class="form-control" name="invoiceNr"
                     placeholder="Invoice Nr...">
             </div>
-            <div class="my-1">
+            <div class="my-3">
+                <label>Year:</label>
                 <input type="text" [(ngModel)]="invoice.anno" class="form-control" name="invoiceYear"
                     placeholder="Invoice Year...">
             </div>
-            <div class="my-1">
+            <div class="my-3">
+                <label>Amount:</label>
                 <input type="text" [(ngModel)]="invoice.importo" class="form-control" name="invoiceAmount"
                     placeholder="Invoice Amount...">
             </div>
-            <div class="my-1">
+            <div class="my-3">
                 <p>Payment Status:</p>
-                <select class="custom-select" [(ngModel)]="invoice.stato.nome" name="invoiceState">
-                    <option [ngValue]="item" *ngFor="let item of invoiceStatuses">{{item}}</option>
+                <select class="custom-select" [(ngModel)]="invoice.content.nome" name="invoiceState">
+                    <option [ngValue]="item" *ngFor="let item of invoiceStatus.content">{{item.nome}}</option>
                 </select>
             </div>
-            <p>Select Client:</p>
+            <p>Select Client ID:</p>
             <select class="custom-select" [(ngModel)]="invoice.cliente.id" name="client-id">
-                <option [ngValue]="item" *ngFor="let item of clientlist">{{item.id}}</option>
+                <option [ngValue]="item" *ngFor="let item of clientlist.content">{{item.id}}</option>
             </select>
         </div>
 

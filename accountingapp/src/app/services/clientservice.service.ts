@@ -27,8 +27,8 @@ export class ClientserviceService {
     return this.http.get<Iclienttable>(this.urlAPI);
   }
 
-  getClient(id:number){
-    return this.http.get<Iclient>(this.urlAPIDetail+id);
+  getClient(id: number) {
+    return this.http.get<Iclient>(this.urlAPIDetail + id);
   }
 
   createClient(item: INEWclient) {
@@ -36,13 +36,13 @@ export class ClientserviceService {
   }
 
   updateClient(item: Iclient) {
-    return this.http.put(this.urlAPIUpdate+item.id, item);
+    return this.http.put(this.urlAPIUpdate + item.id, item);
   }
 
-  removeClient(item:Iclient) {
-    return this.http.delete(this.urlAPIDelete+item.id);
+  removeClient(item: Iclient) {
+    return this.http.delete(this.urlAPIDelete + item.id);
   }
-  
+
 }
 
 

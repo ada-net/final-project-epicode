@@ -25,8 +25,8 @@ export class MunicipalityserviceService {
     return this.http.get<Imunicipalities>(this.urlAPI);
   }
 
-  getMunicipality(id:number){
-    return this.http.get<Imunicipality>(this.urlAPIDetail+id);
+  getMunicipality(id: number) {
+    return this.http.get<Imunicipality>(this.urlAPIDetail + id);
   }
 
   createMunicipality(item: Imunicipality) {
@@ -34,13 +34,13 @@ export class MunicipalityserviceService {
   }
 
   updateMunicipality(item: Imunicipality) {
-    return this.http.put(this.urlAPIUpdate+item.id, item);
+    return this.http.put(this.urlAPIUpdate + item.id, item);
   }
 
-  removeMunicipality(item:Imunicipality) {
-    return this.http.delete(this.urlAPIDelete+item.id);
+  removeMunicipality(item: Imunicipality) {
+    return this.http.delete(this.urlAPIDelete + item.id);
   }
-  
+
 }
 
 

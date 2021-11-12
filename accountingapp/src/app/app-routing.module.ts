@@ -12,6 +12,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { DetailclientComponent } from './detailclient/detailclient.component';
 import { DetailinvoiceComponent } from './detailinvoice/detailinvoice.component';
 import { EditinvoiceComponent } from './editinvoice/editinvoice.component';
+import { AddinvoiceComponent } from './addinvoice/addinvoice.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: 'clients/:id/detail', 
     component: DetailclientComponent
+  },
+  {
+    path: 'invoices/new', 
+    component: AddinvoiceComponent
   },
   {
     path: 'invoices/list', 

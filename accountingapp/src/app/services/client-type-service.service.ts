@@ -1,9 +1,6 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Iclienttypes } from '../interfaces/iclienttypes';
-import { Iclienttype } from '../interfaces/iclienttype';
-
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +15,6 @@ export class ClientTypeServiceService {
   getAllTypes() {
     return this.http.get(this.urlAPI);
   }
-  
+
 }
- 
+

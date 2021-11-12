@@ -20,9 +20,10 @@ export class AddinvoiceComponent implements OnInit {
 
   title!: string;
 
-  invoiceStatuses: any = [];
+  invoiceStatus!: IinvoiceStatus;
+  //invoiceStatus: IinvoiceStatus[] = [];
 
-  clientlist: any = [];
+  clientlist!: Iclienttable;
 
   invoice: Iinvoice = {
     id: 1,
@@ -99,7 +100,7 @@ export class AddinvoiceComponent implements OnInit {
   constructor(
     private invoiceService: InvoicesService,
     private statusService: PaidStatusServiceService,
-    private clientIdService: ClientserviceService,
+    private clientService: ClientserviceService,
     private router: Router,
     private route: ActivatedRoute
   ) { }
@@ -119,12 +120,11 @@ export class AddinvoiceComponent implements OnInit {
 
   getInvoiceStatuses() {
     this.statusService.getAllStatuses().subscribe(response =>
-      this.invoiceStatuses = response);
+      this.invoiceStatus = response);
   }
 
   getClients() {
-    this.clientIdService.getAllClients().subscribe(response =>
-      this.clientlist = response.content);
+    this.clientService.getAllClients().subscribe(response => this.clientlist = response)
   }
 
   saveInvoice() {

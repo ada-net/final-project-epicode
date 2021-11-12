@@ -4,7 +4,6 @@ import { Iclient } from '../interfaces/iclient';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Imunicipalities } from '../interfaces/imunicipalities';
 import { Iprovinces } from '../interfaces/iprovinces';
-import { Iclienttypes } from '../interfaces/iclienttypes';
 import { ClientTypeServiceService } from '../services/client-type-service.service';
 import { MunicipalityserviceService } from '../services/municipalityservice.service';
 import { ProvinceserviceService } from '../services/provinceservice.service';

@@ -25,8 +25,8 @@ export class ProvinceserviceService {
     return this.http.get<Iprovinces>(this.urlAPI);
   }
 
-  getProvince(id:number){
-    return this.http.get<Iprovince>(this.urlAPIDetail+id);
+  getProvince(id: number) {
+    return this.http.get<Iprovince>(this.urlAPIDetail + id);
   }
 
   createProvince(item: Iprovince) {
@@ -34,15 +34,15 @@ export class ProvinceserviceService {
   }
 
   updateProvince(item: Iprovince) {
-    return this.http.put(this.urlAPIUpdate+item.id, item);
+    return this.http.put(this.urlAPIUpdate + item.id, item);
   }
 
-  removeProvince(item:Iprovince) {
-    return this.http.delete(this.urlAPIDelete+item.id);
+  removeProvince(item: Iprovince) {
+    return this.http.delete(this.urlAPIDelete + item.id);
   }
 }
 
 
 
 
-  
+

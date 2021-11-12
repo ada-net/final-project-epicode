@@ -25,19 +25,19 @@ export class InvoicesService {
     return this.http.get<Iinvoicetable>(this.urlAPI);
   }
 
-  getInvoice(id:number){
-    return this.http.get<Iinvoice>(this.urlAPIDetail+id+'?1');
+  getInvoice(id: number) {
+    return this.http.get<Iinvoice>(this.urlAPIDetail + id + '?1');
   }
 
-  createInvoice(item:Inewinvoice){
-    return this.http.post(this.urlAPICreate,item);
+  createInvoice(item: Inewinvoice) {
+    return this.http.post(this.urlAPICreate, item);
   }
 
   updateInvoice(item: Iinvoice) {
-    return this.http.put(this.urlAPIUpdate+item.id, item);
+    return this.http.put(this.urlAPIUpdate + item.id, item);
   }
 
-  removeInvoice(item:Iinvoice) {
-    return this.http.delete(this.urlAPIDelete+item.id);
+  removeInvoice(item: Iinvoice) {
+    return this.http.delete(this.urlAPIDelete + item.id);
   }
 }
