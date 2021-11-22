@@ -65,8 +65,8 @@ export class AddinvoiceComponent implements OnInit {
   }
 
   saveInvoice() {
-    this.invoiceService.createInvoice(this.newInvoice).subscribe(response => console.log(response));
-    this.router.navigate(['invoices/list']);
+    this.invoiceService.createInvoice(this.newInvoice).subscribe(response => this.router.navigate(['invoices/list']));
+    
   }
 
 }

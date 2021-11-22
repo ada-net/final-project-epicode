@@ -23,6 +23,7 @@ export class InvoicelistComponent implements OnInit {
   removeInvoice(item: Iinvoice): void {
     this.invoiceService.removeInvoice(item).subscribe(resp => {
       this.invoicesForFilter = this.invoicesForFilter.filter(element => element.id !== item.id);
+      this.router.navigate(['invoices/list']);
     });
   }
 

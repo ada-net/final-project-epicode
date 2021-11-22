@@ -157,12 +157,14 @@ export class AddclientComponent implements OnInit {
     if (!this.newclient.dataUltimoContatto) {
       console.log('Create Client');
       console.log(this.newclient.tipoCliente);
-      this.clientService.createClient(this.newclient).subscribe(response => console.log(response));
+      this.clientService.createClient(this.newclient).subscribe(response => this.router.navigate(['clients/list']));
+      
     } else {
       console.log('Update Client');
-      this.clientService.updateClient(this.client).subscribe(response => console.log(response));
+      this.clientService.updateClient(this.client).subscribe(response => this.router.navigate(['clients/list']));
+      
     }
-    this.router.navigate(['clients/list']);
+    
   }
 
 }

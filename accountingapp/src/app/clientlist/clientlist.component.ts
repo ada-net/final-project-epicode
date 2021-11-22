@@ -25,6 +25,7 @@ export class ClientlistComponent implements OnInit {
   removeClient(item: Iclient): void {
     this.clientService.removeClient(item).subscribe(resp => {
       this.clientsForFilter = this.clientsForFilter.filter(element => element.id !== item.id);
+      this.router.navigate(['clients/list']);
     });
   }
 
